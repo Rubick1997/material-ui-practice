@@ -84,15 +84,15 @@ function App() {
 						</Typography>
 						<Typography variant=' subtitle1'>Welcome to Material UI</Typography>
 						<ButtonStyled />
-						<Grid container spacing={2} justify="center">
-							<Grid item>
-								<Paper style={{ height: 75, width: 50 }} />
+						<Grid container spacing={2} justify='center'>
+							<Grid item xs={3} sm={6}>
+								<Paper style={{ height: 75, width: "100%" }} />
 							</Grid>
-							<Grid item>
-								<Paper style={{ height: 75, width: 50 }} />
+							<Grid item xs={3} sm={6}>
+								<Paper style={{ height: 75, width: "100%" }} />
 							</Grid>
-							<Grid item>
-								<Paper style={{ height: 75, width: 50 }} />
+							<Grid item xs={3} sm={6}>
+								<Paper style={{ height: 75, width: "100%" }} />
 							</Grid>
 						</Grid>
 						<CheckboxExample />
