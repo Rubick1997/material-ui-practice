@@ -13,9 +13,12 @@ import {
 	Container,
 	Paper,
 	Grid,
+	AppBar,
+	Toolbar,
+	Icon,
 } from "@material-ui/core";
 import { orange, green } from "@material-ui/core/colors";
-import { Save, Delete } from "@material-ui/icons";
+import { Save, Delete, Menu } from "@material-ui/icons";
 import { useState } from "react";
 import "@fontsource/roboto";
 
@@ -35,14 +38,6 @@ const theme = createMuiTheme({
 		h2: {
 			fontSize: 30,
 			marginBottom: 15,
-		},
-	},
-	palette: {
-		primary: {
-			main: green[500],
-		},
-		secondary: {
-			main: orange[500],
 		},
 	},
 });
@@ -79,6 +74,19 @@ function App() {
 			<Container maxWidth='s'>
 				<div className='App'>
 					<header className='App-header'>
+						<AppBar color="secondary" >
+							<Toolbar>
+								<Icon>
+									<Menu />
+								</Icon>
+								<Typography variant='h6'>
+                  MUI Theming
+                </Typography>
+                <Button>
+                  Login
+                </Button>
+							</Toolbar>
+						</AppBar>
 						<Typography variant='h2' component='div'>
 							Welcome to Material UI
 						</Typography>
