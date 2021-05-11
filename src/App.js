@@ -9,10 +9,12 @@ import {
 	makeStyles,
 	ThemeProvider,
 	createMuiTheme,
+	Typography,
 } from "@material-ui/core";
 import { orange, green } from "@material-ui/core/colors";
 import { Save, Delete } from "@material-ui/icons";
 import { useState } from "react";
+import "@fontsource/roboto";
 
 const useStyles = makeStyles({
 	root: {
@@ -26,6 +28,12 @@ const useStyles = makeStyles({
 });
 
 const theme = createMuiTheme({
+	typography: {
+		h2: {
+			fontSize: 30,
+      marginBottom:15
+		},
+	},
 	palette: {
 		primary: {
 			main: green[500],
@@ -67,6 +75,10 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<div className='App'>
 				<header className='App-header'>
+					<Typography variant='h2' component='div'>
+						Welcome to Material UI
+					</Typography>
+					<Typography variant=' subtitle1'>Welcome to Material UI</Typography>
 					<ButtonStyled />
 					<TextField
 						variant='filled'
