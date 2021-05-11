@@ -6,9 +6,26 @@ import {
 	Checkbox,
 	FormControlLabel,
 	TextField,
+	makeStyles,
 } from "@material-ui/core";
 import { Save, Delete } from "@material-ui/icons";
 import { useState } from "react";
+
+const useStyles = makeStyles({
+	root: {
+		background: "linear-gradient(45deg, #333,#999)",
+		border: 0,
+		marginBottom: 15,
+		borderRadius: 15,
+		color: "white",
+		padding: "5px 30px",
+	},
+});
+
+function ButtonStyled() {
+	const classes = useStyles();
+	return <Button className={classes.root}> Styled Button </Button>;
+}
 
 function CheckboxExample() {
 	const [checked, setChecked] = useState(true);
@@ -35,12 +52,13 @@ function App() {
 	return (
 		<div className='App'>
 			<header className='App-header'>
+				<ButtonStyled />
 				<TextField
 					variant='filled'
 					color='secondary'
 					type='email'
 					label='The Time'
-          placeholder="testing@gmail.com"
+					placeholder='testing@gmail.com'
 				/>
 				<CheckboxExample />
 				<ButtonGroup variant='contained'>
